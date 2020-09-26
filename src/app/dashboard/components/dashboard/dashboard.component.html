@@ -1,0 +1,203 @@
+<div fxLayout="row" fxLayoutGap="16px">
+    <div fxFlex="25%" class="card">
+        <div fxLayout="row">
+            <div class="circl color-info" fxLayoutAlign="center center">
+                <mat-icon>image</mat-icon>
+            </div>
+            <div class="user-car">
+                <h5>$18090</h5>
+                <p>Income</p>
+            </div>
+        </div>
+    </div>
+    <div fxFlex="25%" class="card">
+        <div fxLayout="row">
+            <div class="circl color-primary" fxLayoutAlign="center center">
+                <mat-icon>person</mat-icon>
+            </div>
+            <div class="user-car">
+                <h5>$18090</h5>
+                <p>Income</p>
+            </div>
+        </div>
+    </div>
+    <div fxFlex="25%" class="card">
+        <div fxLayout="row">
+            <div class="circl color-purple" fxLayoutAlign="center center">
+                <mat-icon>image</mat-icon>
+            </div>
+            <div class="user-car">
+                <h5>$18090</h5>
+                <p>Income</p>
+            </div>
+        </div>
+    </div>
+    <div fxFlex="25%" class="card">
+        <div fxLayout="row">
+            <div class="circl color-danger" fxLayoutAlign="center center">
+                <mat-icon>settings</mat-icon>
+            </div>
+            <div class="user-car">
+                <h5>$18090</h5>
+                <p>Income</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div fxLayout="row" fxLayoutGap="16px">
+    <div fxFlex="33%" class="schedule">
+        <div fxLayout="column" class="heading">
+            <h3>Today's Schedule</h3>
+            <p>check out your daily schedule</p>
+        </div> 
+        <div fxLayout="column" class="task">
+            <div class="task-1 common-task" fxLayout="row">
+                <div class="circle" fxLayoutAlign="center center">
+                    <mat-icon>person</mat-icon>
+                </div>
+                <div class="content">
+                    <h4>Meeting today</h4><span>5pm</span>
+                    <p>you can write anything</p>
+                </div>
+                <span></span>
+            </div>
+            <div class="task-2 common-task" fxLayout="row">
+                <div class="circle" fxLayoutAlign="center center">
+                    <mat-icon>image</mat-icon>
+                </div>
+                <div class="content">
+                    <h4>Meeting today</h4><span>5pm</span>
+                    <p>you can write anything</p>
+                </div>
+            </div>
+            <div class="task-1 common-task" fxLayout="row">
+                <div class="circle" fxLayoutAlign="center center">
+                    <mat-icon>person</mat-icon>
+                </div>
+                <div class="content">
+                    <h4>Meeting today</h4><span>5pm</span>
+                    <p>you can write anything</p>
+                </div>
+                <span></span>
+            </div>
+            <div class="task-2 common-task" fxLayout="row">
+                <div class="circle" fxLayoutAlign="center center">
+                    <mat-icon>image</mat-icon>
+                </div>
+                <div class="content">
+                    <h4>Meeting today</h4><span>5pm</span>
+                    <p>you can write anything</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div fxFlex="66%">
+        <div fxLayout="column" fxLayoutGap="16px">
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="salesHeader">
+                <div class="salesLeft">
+                    <h4>Sales Overview</h4>
+                    <p>Check the monthly sales</p>
+                </div>
+                <div class="month">Januaray</div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="basicInfo">
+                <div class="basicLeft">
+                    <h3>March 2017</h3>
+                    <h4>Report for this month</h4>
+                </div>
+                <p class="basicRight">$3,690</p>
+            </div>
+            <div class="table">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> # </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> NAME </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="weight">
+                        <th mat-header-cell *matHeaderCellDef> STATUS </th>
+                        <td mat-cell *matCellDef="let element"> <p class="tag" [ngClass]="element.weight == 'SALE' ? 'color-info': element.weight == 'EXTENDED' ? 'color-danger': 'color-purple'">{{element.weight}}</p></td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="symbol">
+                        <th mat-header-cell *matHeaderCellDef> DATE </th>
+                        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef> PRICE </th>
+                        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+<br><br><br>
+<div fxLayout="row" fxLayoutGap="16px">
+    <div fxFlex="66%">
+        <div class="table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> NAME </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> STATUS </th>
+                    <td mat-cell *matCellDef="let element"> <p class="tag" [ngClass]="element.weight == 'SALE' ? 'color-info': element.weight == 'EXTENDED' ? 'color-danger': 'color-purple'">{{element.weight}}</p></td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> DATE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef> PRICE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    </div>
+    <div fxFlex="33%">
+        <div></div>
+        <div class="blog-post-img" [ngStyle]="{'background-image':'url('+blogImg+')'}"></div>
+            <div class="blog-post-description p-16">
+                <h3 class="mb-16"
+                >Lorem ipsum dolor sit amet.</h3>
+                <span class="tag color-purple">Technology</span>
+                <p class="mt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sit
+                    deserunt assumenda rerum sed architecto consectetur ab, totam quas earum.</p>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <a href="">Read more</a>
+                    <button class="share" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                        <mat-icon>share</mat-icon>
+                    </button>
+                </div>
+            </div>
+    </div>
+</div>

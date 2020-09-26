@@ -1,0 +1,118 @@
+:host{
+    table {
+        width: 100%;
+      }
+    .circl{
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        min-width: 36px;
+        margin-right: 12px;
+        mat-icon{
+            font-size: 12px;
+            height: 12px;
+            width: 12px;
+            color: white;
+        }
+    }
+    
+    
+    .schedule{
+        background: white;
+        padding: 16px;
+        .heading{
+            line-height: 20px;
+            margin-bottom: 26px;
+            h3{
+                font-size: 14px;
+                color: #888484;
+            }
+            p{
+                font-size: 13px;
+                color: #cccaca;
+            };
+        }
+        .common-task{
+            padding: 15px 0px;
+            .circle{
+                height: 32px;
+                min-width: 32px;
+                border-radius: 50%;
+                color: white;
+                margin-right: 20px;
+
+                mat-icon{
+                    font-size: 16px;
+                    height: 16px;
+                    width: 16px;
+                    text-align: center;
+                }
+            }
+            .content{
+                h4{
+                    font-size: 13.5px;
+                    color: #888484;
+                    display: inline-block;
+                }
+                span{
+                    color: #ddd;
+                    font-size: 11px;
+                    padding: 3px;
+                }
+                p{
+                    font-size: 13px;
+                    color: #cccaca;
+                    line-height: 17px;
+                }
+            }
+        }
+        .task-1{
+            .circle{
+                background: #58DDC6;
+            }
+        }
+        .task-2{
+            .circle{
+                background: #20AEE3;
+            }
+        }
+    }
+    
+    .salesHeader{
+        background-color: white;
+        padding: 16px;
+    }
+    .basicInfo{
+        padding: 16px;
+        .basicRight{
+            font-size: 28px;
+        }
+    }
+
+    .blog-post-img {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 240px;
+    }
+    .blog-post-description {
+        h3 {
+            color: #3b3b3b;
+        }
+
+        p {
+            font-family: 'Muli', sans-serif;
+            color: #858585;
+        }
+    }
+
+    .blog-tag {
+        background-color: indigo;
+        color: #fff;
+    }
+    .share{
+        mat-icon{
+            color: rgba(36, 35, 35, 0.726);
+        }
+    }
+}
