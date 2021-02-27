@@ -45,8 +45,8 @@
     </div>
 </div>
 <br><br><br>
-<div fxLayout="row" fxLayoutGap="16px">
-    <div fxFlex="33%" class="schedule">
+<div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="16px">
+    <div fxFlex.gt-sm="33%" fxFlex="100%" class="schedule">
         <div fxLayout="column" class="heading">
             <h3>Today's Schedule</h3>
             <p>check out your daily schedule</p>
@@ -146,8 +146,8 @@
 </div>
 </div>
 <br><br><br>
-<div fxLayout="row" fxLayoutGap="16px">
-    <div fxFlex="66%">
+<div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="16px">
+    <div fxFlex.gt-sm="66%" fxFlex="100%">
         <div class="table">
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
